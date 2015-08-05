@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yandex #1</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" media="screen" href="Lato-Thin.css" />
+	<style type="text/css">
+	body {
+		font-family: 'LatoThin', sans-serif;
+	}
+	.flight-item {
+		float: left;
+		margin: 20px;
+		padding: 20px;
+		background: #ddd;
+		min-width: 300px;
+		min-height: 325px;
+	}
+	.flight-item:nth-child(even) {
+		float: left;
+		margin: 20px;
+		padding: 20px;
+		background: #eee;
+		min-width: 300px;
+		min-height: 325px;
+	}
+	.flight {
+		margin-top: -5px;
+	}
+	.subitem {
+		padding: 5px;
+		color: #757575;
+	}
+	.subitem:hover {
+		cursor: pointer;
+		background: #fff;
+	}
+
+	.help {
+		padding: 5px;
+		margin-top: 7px;
+		color: #757575;
+		background: #eee;
+	}
+	.arrival-checkbox {
+		float: left;
+		margin-left: 20px;
+		margin-top: 20px;
+		background: #eee;
+		color: #757575;
+		border: 1px solid #eee;
+	}
+	.sortie-checkbox {
+		float: left;
+		margin-right: 20px;
+		margin-top: 20px;
+		background: #eee;
+		margin-top: 20px;
+		color: #757575;
+		border: 1px solid #eee;
+	}
+	.flight-types {
+		margin-bottom: 35px;
+		color: #757575;
+	}
+	input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+    }
+	input[type="checkbox"]:hover + label:hover {
+		cursor: pointer;
+	}
+	#arr-chk:checked ~ .arrival-checkbox {
+		background: #fff;
+	}
+	#sor-chk:checked ~ .sortie-checkbox {
+		background: #fff;
+	}
+	#arr-chk:checked ~ .arrival {
+		display: none;
+	}
+	#sor-chk:checked ~ .sortie {
+		display: none;
+	} 
+	.checkbox-label {
+		display: block;
+		height: 40px;
+		width: 168px;
+		text-align: center;
+		line-height: 40px;
+	}
+	</style>
+</head>
+<body>
+<div class="flight-table">
+	<div class="flight-item">
+		<div class="flight help">Flight Type</div>
+		<div class="flight-number help">Flight Number</div>
+		<div class="flight-company help">Flight Company</div>
+		<div class="flight-company-logo help">Flight Company Logotype</div>
+		<div class="flight-airbus help">Flight Airbus Type</div>
+		<div class="flight-point-airport help">Flight Airport</div>
+		<div class="flight-time help">Flight Time</div>
+		<div class="flight-status help">Flight Status</div>
+		<div class="flight-fn help">Flight Footnote</div>
+	</div>
+	<input type="checkbox" id="arr-chk">
+	<div class="arrival-checkbox"><label for="arr-chk" class="checkbox-label">Arrival</label></div>
+	<input type="checkbox" id="sor-chk">
+	<div class="sortie-checkbox"><label for="sor-chk" class="checkbox-label">Sortie</label></div>
+	<div class="flight-item sortie">
+		<div class="flight subitem">↑</div>
+		<div class="flight-number subitem">UT 555</div>
+		<div class="flight-company subitem">UTair</div>
+		<div class="flight-company-logo subitem"><img src="utair_logo.jpg"></div>
+		<div class="flight-airbus subitem">Boeing 737-500</div>
+		<div class="flight-point-airport subitem">Chelyabinsk (Baladino)</div>
+		<div class="flight-time subitem">00:05</div>
+		<div class="flight-status subitem">Detained before 01:05</div>
+		<div class="flight-fn subitem">Late arrival</div>
+	</div>
+	<div class="flight-item arrival">
+		<div class="flight subitem">↓</div>
+		<div class="flight-number subitem">UN 354</div>
+		<div class="flight-company subitem">Transaero</div>
+		<div class="flight-company-logo subitem"><img src="transaero_logo.png"></div>
+		<div class="flight-airbus subitem">Boeig 737-400</div>
+		<div class="flight-point-airport subitem">London (Heathrow)</div>
+		<div class="flight-time subitem">00:05</div>
+		<div class="flight-status subitem">Flew on 21:01</div>
+		<div class="flight-fn subitem">Waiting on 00:21</div>
+	</div>
+	<div class="flight-item sortie">
+		<div class="flight subitem">↑</div>
+		<div class="flight-number subitem">SU 5816</div>
+		<div class="flight-company subitem">Aeroflot — Russian Airlines</div>
+		<div class="flight-company-logo subitem"><img src="aeroflot_logo.gif"></div>
+		<div class="flight-airbus subitem">Boeing 737-800</div>
+		<div class="flight-point-airport subitem">Orenburg (Central)</div>
+		<div class="flight-time subitem">00:05</div>
+		<div class="flight-status subitem">Detained before 01:05</div>
+		<div class="flight-fn subitem">Late arrival</div>
+	</div>
+	<div class="flight-item arrival">
+		<div class="flight subitem">↓</div>
+		<div class="flight-number subitem">DR 408</div>
+		<div class="flight-company subitem">Pobeda</div>
+		<div class="flight-company-logo subitem"><img src="pobeda_logo.png"></div>
+		<div class="flight-airbus subitem">Boeing 737-800</div>
+		<div class="flight-point-airport subitem">Ekaterinburg (Kolcovo)</div>
+		<div class="flight-time subitem">00:10</div>
+		<div class="flight-status subitem">Flown on 00:03</div>
+		<div class="flight-fn subitem">Tape baggage D04</div>
+	</div>
+	<div class="flight-item arrival">
+		<div class="flight subitem">↓</div>
+		<div class="flight-number subitem">VS 7104</div>
+		<div class="flight-company subitem">Virgin Atlantic Airways</div>
+		<div class="flight-company-logo subitem"><img src="virginiaatanticairways_logo.png"></div>
+		<div class="flight-airbus subitem">Boeing 737-400</div>
+		<div class="flight-point-airport subitem">London (Heathrow)</div>
+		<div class="flight-time subitem">00:05</div>
+		<div class="flight-status subitem">Flew on 21:01</div>
+		<div class="flight-fn subitem">Waiting on 00:19</div>
+	</div>
+</div>
+</body>
+</html>
